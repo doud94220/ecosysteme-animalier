@@ -223,6 +223,39 @@ $Lion2 = new Lion("PrinceDeLaJungle", "Lion d'Atlas", ['X' => 1, 'Y' => 3]);
 //--------------------------------------- Execution des classes avec Thread ---------------------------------------
 // ****************************** Cette partie avec Threads ne fonctionne pas encore ******************************
 
+/*
+	Résumé de mes problèmes = REX (Retour D'EXpérience) :
+
+	PI je tape le compte-rendu plusieurs semaines après les problèmes. Donc pas facile de tout se remémorer et dans le bon ordre !
+
+	Comme la classe Thread n'est pas reconnue, j'installe des fichiers / librairies / packages (je sais plus en détail) qui gère les Thread
+	=> Ca foire... 
+	Je bidouille dans le php.ini
+	=> Ca foire toujours... 
+	Je regarde les logs de PHP
+	=> Y'a pleins de trucs (du coup c'est dur de s'y retrouver), on a l'impression que toutes les librairies dans le dossier ext posent problème...
+	=> Je supprime le repertoire ext, et j'en recréer un nouveau vide, et j'y ajoute juste le librairie qui est sensé faire marcher les Thread
+	=> Ca chie encore... 
+	=> Je regarde les droits sur ce fichier "*thread*.dll" et les dossiers parents : j'essaie de mettre tous les droits pour tout le monde
+	=> Ca chie toujours... 
+	Je fais des recherches sur les Thread en PHP sur Internet : certains disent que faut faire tourner le code sur Linux Ubuntu
+	=> J'installe Ubuntu pour Windows, mais pas simple de se mettre là dedans
+	=> Je fais d'autres recherches sur les Thread en PHP : 
+	- un mec de très haut niveau dit que ca marche sous Windows
+	- sa vidéo est une conférence de 45 minutes environ : https://afup.org/talks/2116-thread-safety-en-php-zts
+	A ce moment là, mon programme chie mais en plus il fait foirer tout mon environnement de DEV PHP...
+	=> Je ne peux plus créer de projets SF...et j'ai un test technique avec du SF à faire pour un recruteur...
+	Je réinstalle WAMP : j'avais bien fait avant un bck des projets mais pas des bases dans MySQL...mais y'avait pas grand chose
+	=> Je constate que c'est WAMP qui installe plusieurs versions de PHP dans C:\wamp64\bin\php\
+	Je fais pointer mes VE vers le bon dossier php : C:\wamp64\bin\php\php7.4.26\
+	=> Je peux refaire du PHP natif et du MySQL (ce qui me permet de faire le test pour MDS)
+	=> Mais ca chie encore pour SF (et donc je ne peux pas encore faire le projet pour WebAtrio)
+	J'essaie de refaire marcher SF et notamment de créer un projet SF :
+	=> J'ai encore des problèmes techniques (composer notamment) mais je résous ces problèmes (voir mes notes dans mes G Docs)
+	=> Mon environnement est fonctionnel à nouveau !!! (PHP, MySQL, SF)
+	Mais tout est à refaire pour faire fonctionner les Threads sur ce projet (ecosysteme-animalier)
+*/
+
 //phpinfo();
 //die;
 
